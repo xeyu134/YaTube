@@ -14,7 +14,6 @@
         <!-- Подключен файл со стандартными стилями бустрап -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <title>
-            <!-- Эта часть будет меняться -->
             {% block title %}
                 Yatube
             {% endblock %}
@@ -22,10 +21,9 @@
     </head>
     <body>
         <header>
-            {% include 'inсludes/header.html' %}  <!-- Верхняя часть страницы -->
+            {% include 'includes/header.html' %}  <!-- Верхняя часть страницы -->
         </header>
         <main>
-            <!-- Эта часть будет меняться -->
             {% block content %}
                 Пустое место для контента.
             {% endblock %}
@@ -35,7 +33,7 @@
         <!-- text-center: выравнивает текстовые блоки внутри блока по центру -->
         <!-- py-3: контент внутри размещается с отступом сверху и снизу -->
         <footer class="border-top text-center py-3">
-            {% include 'inсludes/footer.html' %}  <!-- Подвал -->
+            {% include 'includes/footer.html' %}  <!-- Подвал -->
         </footer>
     </body>
 </html>
