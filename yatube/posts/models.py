@@ -6,10 +6,12 @@ User = get_user_model()
 
 
 class Post(models.Model):
-    text = models.TextField()  # Тип TextField для хранения произвольного текста
+    # Тип TextField для хранения произвольного текста
+    text = models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)  # Тип даты.
     author = models.ForeignKey(  # связь по ключу с классом Users.
         User,
-        on_delete=models.CASCADE,  # При удалении объекта класса Users удаляются все данные, связанные с ним.
+        # При удалении объекта класса Users удаляются все его данные.
+        on_delete=models.CASCADE,
         related_name='posts'
     )
